@@ -20,7 +20,7 @@ namespace CRUDExample
         }
 
         [BindProperty]
-        public Person Person { get; set; }
+        public ToDo Todo { get; set; }
 
         public IActionResult OnGet(int? id)
         {
@@ -29,9 +29,9 @@ namespace CRUDExample
                 return NotFound();
             }
 
-            Person = _context.GetItemById(id.Value);
+            Todo = _context.GetItemById(id.Value);
 
-            if (Person == null)
+            if (Todo == null)
             {
                 return NotFound();
             }
@@ -42,14 +42,14 @@ namespace CRUDExample
         // more details, see https://aka.ms/RazorPagesCRUD.
         public IActionResult OnPost()
         {
-            _context.Update(Person);
+            _context.Update(Todo);
 
             return RedirectToPage("./Index");
         }
 
         private bool PersonExists(int id)
         {
-            Person p = _context.GetItemById(id);
+            ToDo p = _context.GetItemById(id);
 
             if (p != null)
             {

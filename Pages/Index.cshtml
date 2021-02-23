@@ -12,22 +12,25 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Person[0].Name)
+                @Html.DisplayNameFor(model => model.ToDoList[0].Name)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Person)
+        @foreach (ToDoManager.Data.ToDo toDo in Model.ToDoList)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Name)
+                    @Html.DisplayFor(modelItem => toDo.Name)
+                    @Html.DisplayFor(modelItem => toDo.WhatToDo)
+                    @Html.DisplayFor(modelItem => toDo.IsCompleted)
+                    @Html.DisplayFor(modelItem => toDo.DateCreated)
                 </td>
                 <td>
-                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-page="./Edit" asp-route-id="@toDo.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@toDo.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@toDo.Id">Delete</a>
                 </td>
             </tr>
         }

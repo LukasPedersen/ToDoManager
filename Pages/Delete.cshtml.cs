@@ -19,7 +19,7 @@ namespace CRUDExample
         }
 
         [BindProperty]
-        public Person Person { get; set; }
+        public ToDo Todo { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,9 +28,9 @@ namespace CRUDExample
                 return NotFound();
             }
 
-            Person = _context.GetItemById(id);
+            Todo = _context.GetItemById(id);
 
-            if (Person == null)
+            if (Todo == null)
             {
                 return NotFound();
             }
@@ -44,14 +44,14 @@ namespace CRUDExample
                 return NotFound();
             }
 
-            Person = _context.GetItemById(id);
+            Todo = _context.GetItemById(id);
 
-            if (Person != null)
+            if (Todo != null)
             {
-                _context.Remove(Person.Id);
+                _context.Remove(Todo.Id);
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("Index");
         }
     }
 }

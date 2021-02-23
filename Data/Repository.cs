@@ -8,42 +8,44 @@ namespace ToDoManager.Data
 {
     public class Repository : IRepository
     {
-        private List<Person> people;
+        private List<ToDo> ToDoList;
         public Repository()
         {
-            people = new List<Person>
+            ToDoList= new List<ToDo>
             {
-                new Person{ Id=1, Name="Helle"},
-                new Person{ Id=2, Name="Christian"}
+                new ToDo{Id = 1, Name = "Test", WhatToDo = "test to do lists can you see this?", IsCompleted = false, DateCreated = DateTime.Today },
+                new ToDo{Id = 2, Name = "Test2", WhatToDo = "test to do lists can you edit this?", IsCompleted = false, DateCreated = DateTime.Today },
             };
         }
 
-        public void Insert(Person person)
+        public void Insert(ToDo toDo)
         {
-            person.Id = people.Max(p => p.Id);
-            ++person.Id;
-            people.Add(person);
+            toDo.Id = ToDoList.Max(p => p.Id);
+            ++toDo.Id;
+            ToDoList.Add(toDo);
         }
 
-        public void Update(Person person)
+        public void Update(ToDo toDo)
         {
-            int index = people.FindIndex(p => p.Id == person.Id);
-            people[index].Name = person.Name;
+            int index = ToDoList.FindIndex(p => p.Id == toDo.Id);
+            ToDoList[index].Name = toDo.Name;
+            ToDoList[index].WhatToDo = toDo.WhatToDo;
+            ToDoList[index].IsCompleted = toDo.IsCompleted;
         }
 
-        public List<Person> GetAll()
+        public List<ToDo> GetAll()
         {
-            return people;
+            return ToDoList;
         }
 
-        public Person GetItemById(int? id)
+        public ToDo GetItemById(int? id)
         {
-            return people.SingleOrDefault(p => p.Id == id);
+            return ToDoList.SingleOrDefault(p => p.Id == id);
         }
 
         public void Remove(int id)
         {          
-            people.Remove(GetItemById(id));
+            ToDoList.Remove(GetItemById(id));
         }
     }
 }
