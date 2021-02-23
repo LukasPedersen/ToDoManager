@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ToDoManager.Data
+namespace ToDoManager.Models
 {
     public class ToDo
     {
