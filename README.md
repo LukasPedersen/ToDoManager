@@ -15,6 +15,11 @@ User can create Todo lists, and add tasks to individual Todo lists
 User can see all ToDo lists, and filter between completed an uncompleted tasks
 
 ### Versions
+##### v0.5.1
+```
+1. User can now see details about a ToDo
+2. Small fix for index
+```
 ##### v0.4.0
 ```
 1. User can now edit ToDo's
@@ -26,7 +31,7 @@ User can see all ToDo lists, and filter between completed an uncompleted tasks
 ```
 ##### v0.2.0
 ```
-1. User can now create todo's
+1. User can now create ToDo's
 ```
 ##### v0.1.0
 ```

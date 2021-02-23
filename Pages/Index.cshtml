@@ -16,13 +16,12 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (ToDoManager.Data.ToDo toDo in Model.ToDoList)
+        @foreach (ToDoManager.Models.ToDo toDo in Model.ToDoList)
         {
         <tr>
             <td>@Html.DisplayFor(modelItem => toDo.Name)</td>
             <td>@Html.DisplayFor(modelItem => toDo.WhatToDo)</td>
             <td>@Html.DisplayFor(modelItem => toDo.IsCompleted)</td>
-            <td>@Html.DisplayFor(modelItem => toDo.DateCreated)</td>
             <td>
                 <a class="btn btn-sm btn-info" asp-page="Details" asp-route-id="@toDo.Id">Details</a>
                 | <a class="btn btn-sm btn-warning" asp-page="Edit" asp-route-id="@toDo.Id">Edit</a> |
