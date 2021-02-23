@@ -13,8 +13,8 @@ namespace ToDoManager.Data
         {
             ToDoList= new List<ToDo>
             {
-                new ToDo{Id = 1, Name = "Test", WhatToDo = "test to do lists can you see this?", IsCompleted = false, DateCreated = DateTime.Today },
-                new ToDo{Id = 2, Name = "Test2", WhatToDo = "test to do lists can you edit this?", IsCompleted = false, DateCreated = DateTime.Today },
+                new ToDo{Id = 1, Name = "Test", WhatToDo = "test todo lists can you see this?", IsCompleted = false, DateCreated = DateTime.Today },
+                new ToDo{Id = 2, Name = "Test2", WhatToDo = "test todo lists can you edit this?", IsCompleted = false, DateCreated = DateTime.Today },
             };
         }
 

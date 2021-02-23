@@ -15,6 +15,10 @@ User can create Todo lists, and add tasks to individual Todo lists
 User can see all ToDo lists, and filter between completed an uncompleted tasks
 
 ### Versions
+##### v0.6.1
+```
+1. User can now delete a ToDo
+```
 ##### v0.5.1
 ```
 1. User can now see details about a ToDo
@@ -39,12 +43,12 @@ User can see all ToDo lists, and filter between completed an uncompleted tasks
 ```
 ### ToDo list
 - [x] Add pages that are needed
-- [x] User can create a new list
-- [ ] User can add tasks to individual list
-- [ ] User can filter between completed an uncompleted tasks
+- [x] User can create a new ToDo
 - [x] User can delete a todo
 - [x] User can edit a todo
 - [x] User can view details about a todo
+- [ ] User can add tasks to individual list
+- [ ] User can filter between completed an uncompleted tasks
 - [ ] User can delete a list
 - [ ] Lists are stored on txt files
 
