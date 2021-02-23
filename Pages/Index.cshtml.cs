@@ -19,11 +19,11 @@ namespace ToDoManager.Pages
             _context = context;
         }
 
-        public IList<Person> Person { get; set; }
+        public IList<ToDo> ToDoList { get; set; }
 
         public void OnGet()
         {
-            Person = _context.GetAll();
+            ToDoList = _context.GetAll();
         }
     }
 }

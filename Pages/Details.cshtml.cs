@@ -18,7 +18,7 @@ namespace CRUDExample
             _context = context;
         }
 
-        public Person Person { get; set; }
+        public ToDo Todo { get; set; }
 
         public IActionResult OnGet(int? id)
         {
@@ -27,9 +27,9 @@ namespace CRUDExample
                 return NotFound();
             }
 
-            Person = _context.GetItemById(id);
+            Todo = _context.GetItemById(id);
 
-            if (Person == null)
+            if (Todo == null)
             {
                 return NotFound();
             }

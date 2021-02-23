@@ -25,14 +25,14 @@ namespace CRUDExample
         }
 
         [BindProperty]
-        public Person Person { get; set; }
+        public ToDo Todo { get; set; }
 
 
         public IActionResult OnPost()
         {
-            _context.Insert(Person);
+            _context.Insert(Todo);
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("Index");
         }
     }
 }
