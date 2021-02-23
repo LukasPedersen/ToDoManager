@@ -17,6 +17,10 @@ User can see all ToDo lists, and filter between completed an uncompleted tasks
 ### Versions
 ##### v0.7.2
 ```
+1. Added Privacy policy
+```
+##### v0.7.2
+```
 1. User can now search between all ToDo's
 2. Changed the style for the search bar
 ```
