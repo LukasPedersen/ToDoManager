@@ -15,6 +15,11 @@ User can create Todo lists, and add tasks to individual Todo lists
 User can see all ToDo lists, and filter between completed an uncompleted tasks
 
 ### Versions
+##### v0.7.3
+```
+1. Small fix for Contact me page
+2. Better styling for about me page
+```
 ##### v0.7.2
 ```
 1. Added Privacy policy
