@@ -15,6 +15,10 @@ User can create Todo lists, and add tasks to individual Todo lists
 User can see all ToDo lists, and filter between completed an uncompleted tasks
 
 ### Versions
+##### v0.6.2
+```
+1. Styling for create page
+```
 ##### v0.6.1
 ```
 1. User can now delete a ToDo
