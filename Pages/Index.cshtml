@@ -3,36 +3,32 @@
 @{
     ViewData["Title"] = "Home page";
 }
-<h1>Index</h1>
-
+<h1></h1>
 <p>
-    <a asp-page="Create">Create New</a>
+    <a class="btn btn-primary" asp-page="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table table-dark">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ToDoList[0].Name)
-            </th>
-            <th></th>
+            <th scope="col">Name</th>
+            <th scope="col">What to do</th>
+            <th scope="col">Done?</th>
         </tr>
     </thead>
     <tbody>
         @foreach (ToDoManager.Data.ToDo toDo in Model.ToDoList)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => toDo.Name)
-                    @Html.DisplayFor(modelItem => toDo.WhatToDo)
-                    @Html.DisplayFor(modelItem => toDo.IsCompleted)
-                    @Html.DisplayFor(modelItem => toDo.DateCreated)
-                </td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@toDo.Id">Edit</a> |
-                    <a asp-page="./Details" asp-route-id="@toDo.Id">Details</a> |
-                    <a asp-page="./Delete" asp-route-id="@toDo.Id">Delete</a>
-                </td>
-            </tr>
+        <tr>
+            <td>@Html.DisplayFor(modelItem => toDo.Name)</td>
+            <td>@Html.DisplayFor(modelItem => toDo.WhatToDo)</td>
+            <td>@Html.DisplayFor(modelItem => toDo.IsCompleted)</td>
+            <td>@Html.DisplayFor(modelItem => toDo.DateCreated)</td>
+            <td>
+                <a class="btn btn-sm btn-info" asp-page="Details" asp-route-id="@toDo.Id">Details</a>
+                | <a class="btn btn-sm btn-warning" asp-page="Edit" asp-route-id="@toDo.Id">Edit</a> |
+                <a class="btn btn-sm btn-danger" asp-page="Delete" asp-route-id="@toDo.Id">Delete</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>
