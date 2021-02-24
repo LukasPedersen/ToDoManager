@@ -21,7 +21,7 @@
         <tr>
             <td>@Html.DisplayFor(modelItem => toDo.Name)</td>
             <td>@Html.DisplayFor(modelItem => toDo.WhatToDo)</td>
-            <td>@Html.DisplayFor(modelItem => toDo.IsCompleted)</td>
+            <td><input type="checkbox" class="checkbox" onclick="return false" checked="@toDo.IsCompleted"/>
             <td>
                 <a class="btn btn-sm btn-info" asp-page="Details" asp-route-id="@toDo.Id">Details</a>
                 | <a class="btn btn-sm btn-warning" asp-page="Edit" asp-route-id="@toDo.Id">Edit</a> |

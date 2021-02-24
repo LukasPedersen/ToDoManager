@@ -30,8 +30,7 @@
                 @Html.DisplayFor(model => model.Todo.WhatToDo)
             </td>
             <td>
-                @Html.DisplayFor(model => model.Todo.IsCompleted)
-            </td>
+                <input type="checkbox" class="checkbox" onclick="return false" checked="@Model.Todo.IsCompleted" />
             <td>
                 @Html.DisplayFor(model => model.Todo.DateCreated)
             </td>

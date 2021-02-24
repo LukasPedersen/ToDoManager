@@ -15,9 +15,9 @@ namespace ToDoManager.Data
             {
                 new ToDo{Id = 1, Name = "Test", WhatToDo = "test todo lists can you see this?", IsCompleted = false, DateCreated = DateTime.Today },
                 new ToDo{Id = 2, Name = "Test2", WhatToDo = "test todo lists can you edit this?", IsCompleted = false, DateCreated = DateTime.Today },
-                new ToDo{Id = 3, Name = "aaaa", WhatToDo = "Use this to test search", IsCompleted = false, DateCreated = DateTime.Today },
+                new ToDo{Id = 3, Name = "aaaa", WhatToDo = "Use this to test search", IsCompleted = true, DateCreated = DateTime.Today },
                 new ToDo{Id = 4, Name = "aaaa", WhatToDo = "Use this to test search", IsCompleted = false, DateCreated = DateTime.Today },
-                new ToDo{Id = 5, Name = "aabb", WhatToDo = "Use this to test search", IsCompleted = false, DateCreated = DateTime.Today },
+                new ToDo{Id = 5, Name = "aabb", WhatToDo = "Use this to test search", IsCompleted = true, DateCreated = DateTime.Today },
                 new ToDo{Id = 6, Name = "aabc", WhatToDo = "Use this to test search", IsCompleted = false, DateCreated = DateTime.Today },
             };
         }
